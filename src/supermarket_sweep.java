@@ -21,7 +21,7 @@ public class supermarket_sweep {
         System.out.print("Enter the price of item 3: ");
         float price3 = Float.parseFloat(input.nextLine());
 
-
+        System.out.println("Sainsburys");
         System.out.format(name + "..........%.2f %n", price1);
         System.out.format(name2 + "..........%.2f %n", price2);
         System.out.format(name3 + "..........%.2f %n", price3);
