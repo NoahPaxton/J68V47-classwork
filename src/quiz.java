@@ -5,15 +5,23 @@ public class quiz {
         Scanner input = new Scanner(System.in);
         System.out.print("What is the capital of Scotland: ");
         String scotland = input.nextLine();
-        System.out.println(scotland.toLowerCase().contains("edinburgh"));
+
+        if (!scotland.toLowerCase().equals("edinburgh")) {
+            System.out.println("Sorry, the correct answer is edinburgh");
+        }
 
         System.out.print("What is the capital of Germany: ");
         String germany = input.nextLine();
-        System.out.println(germany.toLowerCase().contains("berlin"));
+        if (!germany.toLowerCase().equals("berlin")) {
+            System.out.println("Sorry, the correct answer is berlin");
+        }
+
 
         System.out.print("What is the capital of Uganda: ");
         String uganda = input.nextLine();
-        System.out.println(uganda.toLowerCase().contains("kampala"));
+        if (!uganda.toLowerCase().equals("kampala")) {
+            System.out.println("Sorry, the correct answer is kampala");
+        }
 
 
     }
