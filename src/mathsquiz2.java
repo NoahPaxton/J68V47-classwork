@@ -5,7 +5,8 @@ public class mathsquiz2 {
     public static void main(String[] args) {
         int score = 0;
         int lives = 3;
-        while (lives >=1 && score <=10 ) {
+        int answered = 1;
+        while (lives >=1 && answered <=10 ) {
             Random rand = new Random();
             int upperbound = 10;
 
@@ -18,10 +19,12 @@ public class mathsquiz2 {
 
             if (question1 * question1_1 == answer1) {
                 score++;
+                answered++;
             }
 
             else {
                 lives --;
+                answered++;
                 System.out.println("you lost a life. " + lives + " remaining");
             }
 
