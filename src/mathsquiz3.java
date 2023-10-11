@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class mathsquiz3 {
 
-    public static int askQuestion(int count) {
+    public static int askQuestion(int count, int userAnswer) {
         Scanner scanner = new Scanner(System.in);
         System.out.format("What is %d + %d? ",count, count*count);
-        int userAnswer = scanner.nextInt();
+        userAnswer = scanner.nextInt();
         return userAnswer;
 
 
@@ -20,7 +20,7 @@ public class mathsquiz3 {
     }
 
 
-    public static int wrongAnswer(int answer, int lives) {
+    public static int wrongAnswer(int lives, int answer) {
         System.out.format("WRONG! The answer is %d %n", answer);
         lives--;
         return lives;
@@ -40,16 +40,16 @@ public class mathsquiz3 {
         int score = 0;
         int lives = 3;
         int userAnswer = 0;
-        int answer;
+        int answer = 0;
         int count = 1;
         while (count <= 10 && lives > 0){
-            askQuestion(count);
+            askQuestion(count, userAnswer);
             answer = count + (count*count);
             if (answer == userAnswer){
                 correctAnswer(score);
 
             } else {
-                wrongAnswer(answer, lives);
+                wrongAnswer(lives, answer);
                 System.out.format("You have %d lives left. %n", lives);
             }
             count++;
