@@ -3,7 +3,8 @@ import java.util.*;
 public class doctordirections {
 
     public static String[] addToStringArray(String[] directions) {
-        String[] newArray = Arrays.copyOf(directions, directions.length + 1);
+        String[] newArray = Arrays.copyOf(directions, 9);
+        System.arraycopy(newArray, 4, newArray, 8, 9);
         return newArray;
     }
     public static void main(String[] args) {
