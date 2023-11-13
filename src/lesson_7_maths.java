@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class lesson_6_maths {
+public class lesson_7_maths {
 
     public static int askQuestion(int count) {
         Scanner input = new Scanner(System.in);
