@@ -1,24 +1,32 @@
 package Lesson11;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class L11_E3 {
+
+
     public static void main(String[] args) {
-        try{
-            BufferedReader in = new BufferedReader(new FileReader("numbers.txt"));
-            String line;
-            do {
-                line = in.readLine();
-                System.out.println(line);
+        try ( Scanner in = new Scanner( new FileReader("numbers.txt") ) ) {
+            int[] numbers = new int[8];
+            for (int i = 0; i < numbers.length; i++) {
+                int num = in.nextInt();
+                numbers[i] = num;
+            }
+            int sum = 0;
 
-            } while (line != null);
 
+            for (int i = 0; i < numbers.length; i++) {
+                sum += numbers[i];
+            }
+
+
+            System.out.println("the sum is " + sum) ;
         } catch (IOException e) {
-            System.out.println("Error occurred reading file: " + e.toString());
-
+            System.out.println("Error occurred reading from file: " + e.toString());
         }
+
 
 
     }
