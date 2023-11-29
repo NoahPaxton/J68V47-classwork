@@ -20,8 +20,6 @@ public class L12E2 {
                 newStudent.firstName = studentDetails.get(1);
                 newStudent.surname = studentDetails.get(2);
                 newStudent.present = Boolean.parseBoolean(studentDetails.get(3));
-                boolean studentIsHere = newStudent.present;
-                String hereornot = attendance(studentIsHere);
                 thisClass.add(newStudent);
                 line = in.readLine();
             }
@@ -30,16 +28,15 @@ public class L12E2 {
         }
         return thisClass;
     }
-    public static String attendance(boolean studentIsHere){
-       if (studentIsHere = true) {
-           String here = "X";
-           return here;
-       }
-       else {
-           String not = "O";
-           return not;
-           }
+    public static String attendance(boolean studentIsHere) {
+        if (studentIsHere) {
+            return "X";
         }
+        else {
+            return "O";
+        }
+
+    }
 
     public static void displayStudent(Student thisStudent){
         // note the slight change to this procedure
@@ -52,7 +49,8 @@ public class L12E2 {
         for(int i=0;i<thisClass.size();i++){
             Student thisStudent = thisClass.get(i);
             // show details for this student
-            // ...
+            displayStudent(thisStudent);
+
         }
     }
 }
